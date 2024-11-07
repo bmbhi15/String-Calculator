@@ -54,4 +54,33 @@ describe("String Calculator", function () {
   it("Should be 13 for 13", function () {
     assert.equal(add("13"), 13);
   });
+
+  it("Should be 42 for 42", function () {
+    assert.equal(add("42"), 42);
+  });
+  it("Should be 99 for 99", function () {
+    assert.equal(add("99"), 99);
+  });
+
+  // test cases with 3 digit numbers
+  it("Should be 100 for 100", function () {
+    assert.equal(add("100"), 100);
+  });
+  it("Should be 456 for 456", function () {
+    assert.equal(add("456"), 456);
+  });
+  it("Should be 789 for 789", function () {
+    assert.equal(add("789"), 789);
+  });
+
+  // test cases with 5 digit numbers
+  it("Should be 12345 for 12345", function () {
+    assert.equal(add("12345"), 12345);
+  });
+  it("Should be 54321 for 54321", function () {
+    assert.equal(add("54321"), 54321);
+  });
+  it("Should be 98765 for 98765", function () {
+    assert.equal(add("98765"), 98765);
+  });
 });
