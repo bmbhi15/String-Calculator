@@ -1,5 +1,6 @@
 function add(numbers: string): number {
   numbers = numbers.replace(/\s/g, "");
+  console.log(numbers);
   if (numbers === "") {
     return 0;
   }

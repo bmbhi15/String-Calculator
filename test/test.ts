@@ -141,4 +141,18 @@ describe("String Calculator", function () {
   it("Should be 6 for 1,2,3 with spaces between numbers and commas", function () {
     assert.equal(add("  1, 2,3  "), 6);
   });
+
+  // test cases with new lines
+  it("Should be 6 for 1,2,3 with new lines between numbers", function () {
+    assert.equal(add("1,\n2,\n3"), 6);
+  });
+  it("Should be 6 for 1,2,3 with new lines between numbers and commas", function () {
+    assert.equal(add("1,\n\n2,\n\n3"), 6);
+  });
+  it("Should be 10 for 1,2,3,4 with new lines between numbers and spaces", function () {
+    assert.equal(add("1,\n2,\n3,\n4"), 10);
+  });
+  it("Should be 28 for 1,2,3,4,5,6,7 with new lines between numbers and commas", function () {
+    assert.equal(add("1,\n\n2,\n\n3,\n\n4,\n\n5,\n\n6,\n\n7"), 28);
+  });
 });
