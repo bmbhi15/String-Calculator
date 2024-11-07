@@ -1,4 +1,5 @@
 function add(numbers: string): number {
+  numbers = numbers.replace(/\s/g, "");
   if (numbers === "") {
     return 0;
   }

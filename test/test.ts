@@ -135,10 +135,10 @@ describe("String Calculator", function () {
   it("Should be 0 for empty spaces", function () {
     assert.equal(add("   "), 0);
   });
-  it("Should be 0 for empty spaces with numbers", function () {
+  it("Should be 6 for 1,2,3 with spaces between numbers", function () {
     assert.equal(add("  1,2,3"), 6);
   });
-  it("Should be 0 for empty spaces with numbers and empty spaces", function () {
+  it("Should be 6 for 1,2,3 with spaces between numbers and commas", function () {
     assert.equal(add("  1, 2,3  "), 6);
   });
 });
