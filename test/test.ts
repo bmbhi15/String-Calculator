@@ -105,4 +105,29 @@ describe("String Calculator", function () {
   it("Should be 1000 for 100,900", function () {
     assert.equal(add("100,900"), 1000);
   });
+
+  // test cases with 3 numbers, with multiple digits
+  it("Should be 100 for 10,20,70", function () {
+    assert.equal(add("10,20,70"), 100);
+  });
+  it("Should be 1000 for 100,200,700", function () {
+    assert.equal(add("100,200,700"), 1000);
+  });
+  it("Should be 10000 for 1000,2000,7000", function () {
+    assert.equal(add("1000,2000,7000"), 10000);
+  });
+
+  // test cases with multiple numbers, with multiple digits
+  it("Should be 100 for 10,20,30,40", function () {
+    assert.equal(add("10,20,30,40"), 100);
+  });
+  it("Should be 1000 for 100,200,300,400", function () {
+    assert.equal(add("100,200,300,400"), 1000);
+  });
+  it("Should be 10000 for 1000,2000,3000,4000", function () {
+    assert.equal(add("1000,2000,3000,4000"), 10000);
+  });
+  it("Should be 100000 for 10000,20000,30000,40000", function () {
+    assert.equal(add("10000,20000,30000,40000"), 100000);
+  });
 });
