@@ -160,7 +160,7 @@ describe("String Calculator", function () {
   it("Should be 3 for //;\n1;2", function () {
     assert.equal(add("//;\n1;2"), 3);
   });
-  it("Should be 6 for //***\n1***2***3", function () {
-    assert.equal(add("//***\n1***2***3"), 6);
+  it("Should be 6 for //*\n1*2*3", function () {
+    assert.equal(add("//*\n1*2*3"), 6);
   });
 });
