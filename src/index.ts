@@ -14,9 +14,19 @@ function add(numbers: string): number {
   }
   if (numbers.includes(delimiter)) {
     const nums = numbers.split(delimiter).map((num) => parseInt(num));
+    const negatives = nums.filter((num) => num < 0);
+    if (negatives.length > 0) {
+      throw new Error(
+        `Negative numbers are not allowed: ${negatives.join(",")}`
+      );
+    }
     return nums.reduce((sum, num) => sum + num, 0);
   }
-  return parseInt(numbers);
+  const num = parseInt(numbers);
+  if (num < 0) {
+    throw new Error(`Negatives not allowed: ${num}`);
+  }
+  return num;
 }
 
 export { add };
