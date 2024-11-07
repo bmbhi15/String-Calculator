@@ -163,4 +163,12 @@ describe("String Calculator", function () {
   it("Should be 6 for //*\n1*2*3", function () {
     assert.equal(add("//*\n1*2*3"), 6);
   });
+
+  // test cases with a negative number
+  it("Should throw an error for -1", function () {
+    assert.throws(() => add("-1"), Error);
+  });
+  it("Should throw an error for -1,2", function () {
+    assert.throws(() => add("-1,2"), Error);
+  });
 });
