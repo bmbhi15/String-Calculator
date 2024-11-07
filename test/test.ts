@@ -1,9 +1,12 @@
 import assert from "assert";
 import { add } from "../src";
 describe("String Calculator", function () {
+  //test cases with empty string
   it("Should be 0 for empty string", function () {
     assert.equal(add(""), 0);
   });
+
+  //test cases with single 1 digit numbers
   it("Should be 0 for 0", function () {
     assert.equal(add("0"), 0);
   });
@@ -36,5 +39,19 @@ describe("String Calculator", function () {
   });
   it("Should be 9 for 9", function () {
     assert.equal(add("9"), 9);
+  });
+
+  //test cases with single 2 digit numbers
+  it("Should be 10 for 10", function () {
+    assert.equal(add("10"), 10);
+  });
+  it("Should be 11 for 11", function () {
+    assert.equal(add("11"), 11);
+  });
+  it("Should be 12 for 12", function () {
+    assert.equal(add("12"), 12);
+  });
+  it("Should be 13 for 13", function () {
+    assert.equal(add("13"), 13);
   });
 });
