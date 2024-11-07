@@ -83,4 +83,15 @@ describe("String Calculator", function () {
   it("Should be 98765 for 98765", function () {
     assert.equal(add("98765"), 98765);
   });
+
+  // test cases with 2 numbers, both single digit
+  it("Should be 3 for 1,2", function () {
+    assert.equal(add("1,2"), 3);
+  });
+  it("Should be 9 for 5,4", function () {
+    assert.equal(add("5,4"), 9);
+  });
+  it("Should be 10 for 6,4", function () {
+    assert.equal(add("6,4"), 10);
+  });
 });
