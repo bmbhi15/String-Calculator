@@ -94,4 +94,15 @@ describe("String Calculator", function () {
   it("Should be 10 for 6,4", function () {
     assert.equal(add("6,4"), 10);
   });
+
+  // test cases with 2 numbers, with multiple digits
+  it("Should be 12 for 1,11", function () {
+    assert.equal(add("1,11"), 12);
+  });
+  it("Should be 100 for 50,50", function () {
+    assert.equal(add("50,50"), 100);
+  });
+  it("Should be 1000 for 100,900", function () {
+    assert.equal(add("100,900"), 1000);
+  });
 });
