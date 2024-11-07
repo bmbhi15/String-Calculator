@@ -171,4 +171,21 @@ describe("String Calculator", function () {
   it("Should throw an error for -1,2", function () {
     assert.throws(() => add("-1,2"), Error);
   });
+
+  // test cases with multiple negative numbers
+  it("Should throw an error for 1,-2,3", function () {
+    assert.throws(() => add("1,-2,3"), Error);
+  });
+  it("Should throw an error for multiple negative numbers like -1,-2,-3", function () {
+    assert.throws(() => add("-1,-2,-3"), Error);
+  });
+  it("Should throw an error with custom delimiter and negative numbers //;\n-1;-2", function () {
+    assert.throws(() => add("//;\n-1;-2"), Error);
+  });
+  it("Should throw an error with spaces and negative numbers", function () {
+    assert.throws(() => add(" -1, -2, -3 "), Error);
+  });
+  it("Should throw an error with newlines and negative numbers", function () {
+    assert.throws(() => add("-1,\n-2,\n-3"), Error);
+  });
 });
