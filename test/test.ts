@@ -130,4 +130,15 @@ describe("String Calculator", function () {
   it("Should be 100000 for 10000,20000,30000,40000", function () {
     assert.equal(add("10000,20000,30000,40000"), 100000);
   });
+
+  // test cases with empty spaces
+  it("Should be 0 for empty spaces", function () {
+    assert.equal(add("   "), 0);
+  });
+  it("Should be 0 for empty spaces with numbers", function () {
+    assert.equal(add("  1,2,3"), 6);
+  });
+  it("Should be 0 for empty spaces with numbers and empty spaces", function () {
+    assert.equal(add("  1, 2,3  "), 6);
+  });
 });
