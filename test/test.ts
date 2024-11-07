@@ -155,4 +155,12 @@ describe("String Calculator", function () {
   it("Should be 28 for 1,2,3,4,5,6,7 with new lines between numbers and commas", function () {
     assert.equal(add("1,\n\n2,\n\n3,\n\n4,\n\n5,\n\n6,\n\n7"), 28);
   });
+
+  // test cases with custom delimiters
+  it("Should be 3 for //;\n1;2", function () {
+    assert.equal(add("//;\n1;2"), 3);
+  });
+  it("Should be 6 for //***\n1***2***3", function () {
+    assert.equal(add("//***\n1***2***3"), 6);
+  });
 });
